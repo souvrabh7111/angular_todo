@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
-
-import { init_tasks } from "../assets/todo-list.json";
+import { initialTasks } from "../assets/todo-list.json";
 import { Task } from "../app/shared/models/task.model";
 
 @Injectable({
@@ -69,12 +68,12 @@ export class TaskStorageService {
     }
     console.log("Loading data from json file");
 
-    for (let i = 0; i < init_tasks.length; i++) {
+    for (let i = 0; i < initialTasks.length; i++) {
       this.tasks.push(
         new Task(
-          init_tasks[i]["title"],
-          init_tasks[i]["note"],
-          init_tasks[i]["id"]
+          initialTasks[i]["title"],
+          initialTasks[i]["note"],
+          initialTasks[i]["id"]
         )
       );
     }
