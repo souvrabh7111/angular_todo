@@ -1,32 +1,23 @@
-import {Component, OnInit} from '@angular/core';
-import {TaskStorageService} from "../task-storage.service";
-import {Task} from "../shared/models/task.model";
+import { Component, OnInit } from "@angular/core";
+import { TaskStorageService } from "../task-storage.service";
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  selector: "app-todo",
+  templateUrl: "./todo.component.html",
+  styleUrls: ["./todo.component.scss"],
 })
 export class TodoComponent implements OnInit {
+  tasks;
+  displayedColumns: string[] = ["id", "title", "note", "actions"];
 
-  tasks: Task[];
+  constructor(private storage: TaskStorageService) {}
 
-  constructor(private storage: TaskStorageService) {
-  }
-
-  /**
-   * Load tasks on init
-   */
-  ngOnInit() : void{
+  ngOnInit(): void {
     this.storage.init();
     this.tasks = this.storage.getTasks();
   }
 
-  /**
-   * Remove the tasks from the list
-   *
-   * @param id task index to remove
-   */
+  // Remove the tasks from the list
   delete(id): void {
     this.storage.delete(id);
     this.tasks = this.storage.getTasks();

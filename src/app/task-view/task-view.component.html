@@ -1,11 +1,16 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Task #{{task.id}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{task.title}}Card subtitle</h6>
-    <p class="card-text">{{task.note}}</p>
-
-    <button (click)="delete(task.id)" class="btn btn-danger">Task done !</button>
-
-    <button class="btn btn-light" [routerLink]="['/tasks']">Back</button>
-  </div>
-</div>
+<mat-card>
+  <mat-card-title>View Task</mat-card-title>
+  <mat-card-content>
+    <p>Task Id: {{ task.id }}</p>
+    <p>Task Title: {{ task.title }}</p>
+    <p>Task Note: {{ task.note }}</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="basic" (click)="delete(task.id)">
+      Delete
+    </button>
+    <button mat-raised-button color="primary" [routerLink]="['/tasks']">
+      Back
+    </button>
+  </mat-card-actions>
+</mat-card>
