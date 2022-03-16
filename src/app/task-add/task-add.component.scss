@@ -1,0 +1,13 @@
+button {
+  margin: 10px;
+}
+
+.todo-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+  &-group {
+    width: 100%;
+  }
+}

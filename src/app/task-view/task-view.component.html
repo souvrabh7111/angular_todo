@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>View Task</mat-card-title>
+  <mat-card-content>
+    <p>Task Id: {{ task.id }}</p>
+    <p>Task Title: {{ task.title }}</p>
+    <p>Task Note: {{ task.note }}</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="basic" (click)="delete(task.id)">
+      Delete
+    </button>
+    <button mat-raised-button color="primary" [routerLink]="['/tasks']">
+      Back
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,14 @@
+{
+  "initialTasks": [
+    {
+      "id": 1,
+      "title": "Task 1",
+      "note": "Note for task 1"
+    },
+    {
+      "id": 2,
+      "title": "Task 2",
+      "note": "Note for task 2"
+    }
+  ]
+}
