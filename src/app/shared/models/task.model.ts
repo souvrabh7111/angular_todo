@@ -1,11 +1,13 @@
 export class Task {
   id: number;
-  title: string;
-  note: string;
+  firstName: string;
+  lastName: string;
+  phone: number;
 
-  constructor(title: string = "", note: string = "", id: number = null) {
-    this.title = title;
-    this.note = note;
+  constructor(firstName: string = "", lastName: string = "", phone:number = null, id: number = null) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phone = phone;
     this.id = id;
   }
 }

@@ -12,8 +12,9 @@ import { Router, ActivatedRoute } from "@angular/router";
 export class TaskEditComponent implements OnInit {
   task: Task;
   id;
-  title = new FormControl("");
-  note = new FormControl("");
+  firstName = new FormControl("");
+  lastName = new FormControl("");
+  phone = new FormControl("");
 
   constructor(
     private storage: TaskStorageService,
@@ -26,14 +27,15 @@ export class TaskEditComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       this.task = this.storage.get(params.get("id"));
       this.id = this.task.id;
-      this.note.setValue(this.task.note);
-      this.title.setValue(this.task.title);
+      this.firstName.setValue(this.task.firstName);
+      this.lastName.setValue(this.task.lastName);
+      this.phone.setValue(this.task.phone);
     });
   }
 
   // Update the task and return to the list
   updateTask() {
-    this.task = this.storage.update(this.id, this.title.value, this.note.value);
+    this.task = this.storage.update(this.id, this.firstName.value, this.lastName.value, this.phone.value);
     this.router.navigate(["/tasks"]);
   }
 }

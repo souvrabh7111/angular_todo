@@ -24,10 +24,12 @@
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
+    "ngrx": "0.0.1-security",
     "popper.js": "^1.15.0",
     "rxjs": "~6.3.3",
+    "rxjs-operators": "^1.1.3",
     "sass": "^1.49.9",
-    "tslib": "^1.9.0",
+    "tslib": "^1.14.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

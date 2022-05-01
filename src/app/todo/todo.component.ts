@@ -8,16 +8,23 @@ import { TaskStorageService } from "../task-storage.service";
 })
 export class TodoComponent implements OnInit {
   tasks;
-  displayedColumns: string[] = ["id", "title", "note", "actions"];
+  displayedColumns: string[] = [
+    "id",
+    "firstName",
+    "lastName",
+    "phone",
+    "actions",
+  ];
 
-  constructor(private storage: TaskStorageService) {}
+  constructor(private storage: TaskStorageService) {
+    this.storage.init();
+  }
 
   ngOnInit(): void {
-    this.storage.init();
     this.tasks = this.storage.getTasks();
   }
 
-  // Remove the tasks from the list
+  // Remove the contact from the list
   delete(id): void {
     this.storage.delete(id);
     this.tasks = this.storage.getTasks();

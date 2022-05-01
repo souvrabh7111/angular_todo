@@ -1,15 +1,29 @@
 <mat-card>
-  <mat-card-title>Edit Task</mat-card-title>
-  <mat-card-subtitle>Edit your task</mat-card-subtitle>
+  <mat-card-title>Edit Contact</mat-card-title>
+  <mat-card-subtitle>Enter contact Details Below</mat-card-subtitle>
   <mat-card-content>
     <form class="todo-form">
       <mat-form-field class="todo-form-group" appearance="fill">
-        <mat-label for="taskTitle">Title</mat-label>
-        <input matInput type="text" id="taskTitle" [formControl]="title" />
+        <mat-label for="taskFirstName">First Name</mat-label>
+        <input
+          matInput
+          type="text"
+          id="taskFirstName"
+          [formControl]="firstName"
+        />
       </mat-form-field>
       <mat-form-field class="todo-form-group" appearance="fill">
-        <mat-label for="taskNote">Note</mat-label>
-        <input matInput type="text" id="taskNote" [formControl]="note" />
+        <mat-label for="taskLastName">Last Name</mat-label>
+        <input
+          matInput
+          type="text"
+          id="taskLastName"
+          [formControl]="lastName"
+        />
+      </mat-form-field>
+      <mat-form-field class="todo-form-group" appearance="fill">
+        <mat-label for="taskPhone">Phone Number</mat-label>
+        <input matInput type="number" id="taskPhone" [formControl]="phone" />
       </mat-form-field>
     </form>
   </mat-card-content>

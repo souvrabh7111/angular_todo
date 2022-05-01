@@ -2,13 +2,15 @@
   "initialTasks": [
     {
       "id": 1,
-      "title": "Task 1",
-      "note": "Note for task 1"
+      "firstName": "FN 1",
+      "lastName": "LN 1",
+      "phone": 2345465667
     },
     {
       "id": 2,
-      "title": "Task 2",
-      "note": "Note for task 2"
+      "firstName": "FN 2",
+      "lasteName": "LN 2",
+      "phone": 7687764043
     }
   ]
 }

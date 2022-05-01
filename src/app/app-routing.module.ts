@@ -21,13 +21,11 @@ const routes: Routes = [
     // display the form to view a new task
     path: "tasks/:id",
     component: TaskViewComponent,
-    data: { title: "Task to do" },
   },
   {
     // display the form to edit a new task
     path: "tasks/:id/edit",
     component: TaskEditComponent,
-    data: { title: "Task edition" },
   },
   // default to /tasks path
   { path: "", redirectTo: "/tasks", pathMatch: "full" },

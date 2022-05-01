@@ -9,14 +9,16 @@ import { Router } from "@angular/router";
   styleUrls: ["./task-add.component.scss"],
 })
 export class TaskAddComponent {
-  title = new FormControl("");
-  note = new FormControl("");
+  firstName = new FormControl("");
+  lastName = new FormControl("");
+  phone = new FormControl("");
+
 
   constructor(private storage: TaskStorageService, private router: Router) {}
 
   // Create a task a redirect to the todo list
   createTask() {
-    this.storage.add(this.title.value, this.note.value);
+    this.storage.add(this.firstName.value, this.lastName.value, this.phone.value);
     this.router.navigate(["/tasks"]);
   }
 }
